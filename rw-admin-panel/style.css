@@ -1,0 +1,416 @@
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+*{
+    scrollbar-width: auto;
+    scrollbar-color: #dedede #ffffff;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar{
+    width: 16px;
+  }
+  
+  *::-webkit-scrollbar-track{
+    background: #ffffff;
+  }
+  
+  *::-webkit-scrollbar-thumb{
+    background-color: #dedede;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  
+  .social-app {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 20px;
+    overflow-y: scroll;
+    position: absolute;
+    right: 7%;
+    top: 13%;
+    z-index: 10;
+  }
+  .social-app .app-1 {
+    padding: 10px;
+  }
+  .social-app a {
+    text-decoration: none;
+    color: black;
+  }
+  .social-app a img {
+    height: 33px;
+    width: 33px;
+  }
+  .social-app a p {
+    font-size: 12px;
+    margin: 0%;
+  }
+  .social-app .app-1:hover {
+    background-color: #eceef1;
+    border-radius: 10px;
+  }
+  
+  .profile {
+    width: 300px;
+    height: 410px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    overflow-y: scroll;
+    position: absolute;
+    right: 7%;
+    top: 13%;
+    padding: 0px 20px;
+    text-align: center;
+    z-index: 10;
+  }
+  .profile img {
+    border-radius: 50%;
+    margin: 15px 0px;
+  }
+  .profile input {
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 5px 25px;
+  }
+  .profile .option {
+    margin: 15px auto;
+    height: 120px;
+    overflow-y: scroll;
+  }
+  .profile ul {
+    padding: 0px;
+  }
+  .profile ul li {
+    list-style: none;
+    font-size: 15px;
+    text-align: start;
+    padding: 3px 0px;
+  }
+  .profile ul li i {
+    padding-right: 15px;
+  }
+  .profile .account {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0px;
+    margin: 10px 0px;
+  }
+  .profile button {
+    border: 1px solid lightgrey;
+    padding: 5px 60px;
+    border-radius: 5px;
+  }
+  .profile button i {
+    padding-right: 5px;
+  }
+  .profile .last {
+    padding: 10px 0px;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+  .profile .last p {
+    font-size: 12px;
+  } 
+  .main-container {
+    display: flex;
+  }
+
+  
+.bell-menu {
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  position: absolute;
+  right: 7%;
+  top: 13%;
+  border-radius: 5px;
+  overflow-y: scroll;
+  z-index: 10;
+}
+.bell-menu a {
+  text-decoration: none;
+}
+.bell-menu a:hover {
+  text-decoration: underline;
+}
+.bell-menu .head {
+  border-bottom: 1px solid lightgrey;
+}
+.bell-menu .bottom {
+  bottom: 0%;
+}
+.bell-menu .row {
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 0px;
+  background-color: white;
+}
+.bell-menu .row {
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 0px;
+  background-color: #eff2f6;
+}
+.bell-menu .row .image {
+  padding: 15px 25px;
+}
+.bell-menu .row .image img {
+  border-radius: 50%;
+}
+.bell-menu .row .cont h6 {
+  font-size: 15px;
+}
+.bell-menu .row .cont p {
+  font-size: 13px;
+}
+.bell-menu .row .cont p span {
+  color: grey;
+}
+.bell-menu .row .cont div {
+  font-size: 15px;
+}
+.bell-menu .row .dots {
+  cursor: pointer;
+}
+.bell-menu .row .dots span {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.bell-menu .row .dots:hover span {
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.bell-menu .row:hover {
+  background-color: #d3dce8;
+}
+
+.top-nav
+{
+  border-bottom: 1px solid lightgrey;
+  height: 75px;
+  z-index: 5;
+}
+
+.search{
+  position: relative;
+}
+.search input{
+  border-radius: 25px;
+  border: 1px solid grey;
+  padding: 5px 35px;
+}
+.search i{
+  position: absolute;
+  left: 18%;
+  top: 12%;
+  z-index: 5;
+}
+.icon{
+  font-size: 25px;
+  text-align: end;
+}
+.icon i{
+  margin: 0px 10px;
+}
+.icon img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+
+
+/* SIDEMENU  START*/
+
+.side-menu
+{
+  height: 100vh;
+  padding: 15px;
+  position: fixed;
+  border-right: 1px solid lightgrey;
+  overflow-y: scroll;
+}
+.offcanvas
+{
+  height: 100vh;
+  padding: 15px;
+  position: fixed;
+  border-right: 1px solid lightgrey;
+  overflow-y: scroll;
+}
+.item
+{
+    cursor: pointer;
+}
+.item p
+{
+    color: rgb(87, 87, 87);
+    margin-left: 5px;
+    padding: 5px;
+}
+.item p:hover,
+.item li:hover
+{
+  background-color: rgb(231, 230, 230);
+  padding: 5px;
+}
+.item li{
+    color: rgb(87, 87, 87);
+    padding: 5px;
+  }
+
+/* SIDEMENU END */
+
+/* HEADER */
+
+.header{
+  padding: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.header h3{
+  font-weight: bolder;
+}
+.header h6
+{
+  color: grey;
+  font-size: 15px;
+  font-weight: 400;
+}
+.header .icon-g
+{
+  height: 35px;
+  width: 35px;
+  background-color: lightgreen;
+  border-radius: 5px;
+  rotate: calc(px);
+}
+.header .small-icon img{
+  height: 35px;
+  width: 35px;
+}
+.header .main-small-icon{
+  border-bottom: 1px solid lightgrey;
+  padding: 15px 10px 10px;
+}
+.header .total-sell{
+  padding: 35px 10px;
+}
+.header-side-chart{
+  overflow: auto;
+}
+.header-side-chart .top{
+  padding: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 25px 0px;
+}
+.header-side-chart .top span{
+  background-color: rgb(249, 238, 219);
+  color: orange;
+  border: 1px solid orange;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+/* HEADER END */
+
+/* MAIN-TABLE START */
+
+.main-table
+{
+  padding: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.main-table button
+{
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 5px 10px;
+}
+.main-table h3{
+  font-weight: bolder;
+}
+.main-table h6
+{
+  color: grey;
+  font-size: 15px;
+  font-weight: 400;
+}
+.Latest-reviews
+{
+  padding: 25px 0px;
+}
+table tr{
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+}
+table tr td{
+  padding: 15px 0px;
+}
+
+/* MAIN-TABLE END */
+
+/* SECOND-TABLE START */
+
+.second-table {
+  padding: 15px 0px;
+  border-bottom: 1px solid lightgrey;
+}
+table{
+  margin: 30px 0px;
+}
+.second-table h3{
+  font-weight: bolder;
+}
+.second-table h6
+{
+  color: grey;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* SECOND-TABLE START */
+
+.last-chart{
+  padding: 30px 0px;
+  border-bottom: 1px solid lightgrey;
+}
+.last-chart h3{
+  font-weight: bolder;
+}
+.last-chart h6
+{
+  color: grey;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* SECOND-TABLE END */
+
+/* FOOTER START */
+
+  .footer{
+    background-color: #eceef1;
+    padding: 30px 25px;
+  }
+
+/* FOOTER END */
+
+@media (max-width:1500px) 
+{
+  .side-menu
+  {
+    font-size: 13px;
+  }
+}
+
+@media (min-width:992px) {
+  .right-menu
+  {
+    margin-left: 16.6%;
+  }
+}

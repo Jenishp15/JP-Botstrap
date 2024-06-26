@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container-fluid top-nav ">
+            <div class="row position-fixed w-100 bg-light pt-3 pb-2 border-bottom border-dark ">
+                <div class="col-lg-3 col-6 d-flex">
+                  <a class="btn fs-5 d-block d-md-block d-lg-none d-xl-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="bi bi-list"></i></a>
+                    <img src="images/logo.png" alt=""  style="height: 50px; width: 50px;">
+                    <h3 class="ms-2">company</h3>
+                </div>
+                <div class="col-md-6 d-xl-block d-lg-block d-md-none d-sm-none d-none" style="text-align: center;">
+                        <div class="search m-auto">
+                            <i class="bi bi-search"></i>
+                            <input type="text" placeholder="search" class="col-8">
+                        </div>
+                </div>
+                <div class="col-lg-3 col-6 icon justify-content-end d-flex">
+                    <span><i class="bi bi-brightness-high"></i></span>
+                    <i class="bi bi-bell"></i>
+                    <i class="bi bi-grid-3x3-gap-fill bi-menu"></i>
+                    <img src="images/user.webp" alt="" class="img-fluid user-img" id="profile">
+                </div>
+            </div>
+    </div>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-2 side-menu d-none d-md-none d-lg-block d-xl-block">
+                <div class="item">
+                    <p id="home" data-bs-toggle="collapse" data-bs-target="#home-1">
+                    <i class="bi bi-caret-right-fill"></i>
+                    <i class="bi bi-speedometer ps-2"></i> Home</p>
+                    <div class= "accordion-collapse collapse ms-5" id="home-1" style="list-style: none;">
+                        <li>E commerce</li>
+                        <li>Project management</li>
+                        <li>CRM</li>
+                        <li>Social feed</li>
+                    </div>
+                </div>
+
+
+                <h6>APPS</h6>
+
+                <div class="item">
+                    <p id="ecommerce" data-bs-toggle="collapse" data-bs-target="#ecom">
+                        <i class="bi bi-caret-right-fill"></i>
+                        <i class="bi bi-cart ps-2"></i>     E commerce</p>
+                    <div class= "accordion-collapse collapse ms-5" id="ecom" style="list-style: none;">
+                        <li>Admin</li>
+                        <li>Customer</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="crm" data-bs-toggle="collapse" data-bs-target="#crm-1">
+                        <i class="bi bi-caret-right-fill"></i> 
+                        <i class="bi bi-telephone ps-2"></i> CRM</p>
+                    <div class= "accordion-collapse collapse ms-5" id="crm-1" style="list-style: none;">
+                        <li>Analytics</li>
+                        <li>Deals <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                        <li>Deal details</li>
+                        <li>Leads</li>
+                        <li>Lead details</li>
+                        <li>Reports</li>
+                        <li>Report details</li>
+                        <li>Add contact</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="project" data-bs-toggle="collapse" data-bs-target="#proj-1">
+                    <i class="bi bi-caret-right-fill"></i>  <i
+                    class="bi bi-journal-bookmark-fill ps-2"></i>    Project management</p>
+                    <div class= "accordion-collapse collapse ms-5" id="proj-1" style="list-style: none;">
+                        <li>Create new</li>
+                        <li>Project list view</li>
+                        <li>Project card view</li>
+                        <li>Project board view</li>
+                        <li>Todo list</li>
+                        <li>Project details</li>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <p style="padding-left: 13px;">
+                        <i class="bi bi-chat-left ps-3"></i>Chat</p>
+                </div>
+
+
+                <div class="item">
+                    <p id="email" data-bs-toggle="collapse" data-bs-target="#mail-1">
+                    <i class="bi bi-caret-right-fill"></i> <i
+                    class="bi bi-envelope ps-2"></i>    Email</p>
+                    <div class= "accordion-collapse collapse ms-5" id="mail-1" style="list-style: none;">
+                        <li>Inbox</li>
+                        <li>Email ditail</li>
+                        <li>Compose</li>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <p id="event" data-bs-toggle="collapse" data-bs-target="#event-1">
+                        <i class="bi bi-caret-right-fill"></i>  <i
+                        class="bi bi-bookmark ps-2"></i>    Event</p>
+                    <div class= "accordion-collapse collapse ms-5" id="event-1" style="list-style: none;">
+                        <li>Create an event</li>
+                        <li>Event ditail</li>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <p id="kanban" data-bs-toggle="collapse" data-bs-target="#kanban-1">
+                        <i class="bi bi-caret-right-fill"></i> <i
+                        class="bi bi-kanban ps-2"></i>    Kanban <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                    <div class= "accordion-collapse collapse ms-5" id="kanban-1" style="list-style: none;">
+                        <li>Kanban</li>
+                        <li>Board</li>
+                        <li>Create bord</li>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <p id="social" data-bs-toggle="collapse" data-bs-target="#social-1">
+                        <i class="bi bi-caret-right-fill"></i> <i
+                        class="bi bi-share ps-2"></i>    Social</p>
+                    <div class= "accordion-collapse collapse ms-5" id="social-1" style="list-style: none;">
+                        <li>kanban</li>
+                        <li>Board</li>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <p style="padding-left: 13px;"> <i class="bi bi-table ps-2"></i> Celender</p>
+                </div>
+
+                <h6>PAGES</h6>
+
+                <div class="item">
+                    <p style="padding-left: 13px;">  <i class="bi bi-compass ps-2"></i> Starter</p>
+                </div>
+
+
+                <div class="item">
+                    <p id="faq" data-bs-toggle="collapse" data-bs-target="#faq-1">
+                        <i class="bi bi-caret-right-fill"></i>  <i
+                        class="bi bi-question-circle ps-2"></i>   Faq</p>
+                    <div class= "accordion-collapse collapse ms-5" id="faq-1" style="list-style: none;">
+                        <li>Faq accordion</li>
+                        <li>Faq tab <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="landing" data-bs-toggle="collapse" data-bs-target="#landing-1">
+                        <i class="bi bi-caret-right-fill"></i>   <i
+                        class="bi bi-globe2 ps-2"></i>   Landing</p>
+                    <div class= "accordion-collapse collapse ms-5" id="landing-1" style="list-style: none;">
+                        <li>Default</li>
+                        <li>Alternate <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <p id="pricing" data-bs-toggle="collapse" data-bs-target="#pricing-1">
+                        <i class="bi bi-caret-right-fill"></i>  <i
+                        class="bi bi-tag ps-2"></i>   Pricing</p>
+                    <div class= "accordion-collapse collapse ms-5" id="pricing-1" style="list-style: none;">
+                        <li>Pricing colums</li>
+                        <li>Pricing grid</li>
+                    </div>
+                </div>  
+
+                <div class="item">
+                    <p style="padding-left: 13px;"> <i class="bi bi-bell ps-3"></i> Notification</p>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 13px;"> <i class="bi bi-people ps-3"></i> Members</p>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 13px;">  <i class="bi bi-clock ps-3"></i> Timeline  <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 13px;">  <i class="bi bi-hourglass-split ps-3"></i> Coming soon <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                </div>
+
+
+                <div class="item">
+                    <p id="error" data-bs-toggle="collapse" data-bs-target="#error-1">
+                        <i class="bi bi-caret-right-fill"></i> <i
+                        class="bi bi-exclamation-triangle ps-2"></i>    Error</p>
+                    <div class= "accordion-collapse collapse ms-5" id="error-1" style="list-style: none;">
+                        <li>403</li>
+                        <li>404</li>
+                        <li>500</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-1">
+                        <i class="bi bi-caret-right-fill"></i>   <i
+                        class="bi bi-lock ps-2"></i>   Authentication</p>
+                    <div class= "accordion-collapse collapse ms-5" id="authentication-1" style="list-style: none;">
+                        <li id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-2">      <i class="bi bi-caret-right-fill"></i> Simple</li>
+                        <div class= "accordion-collapse collapse ms-5" id="authentication-2" style="list-style: none;">
+                            <li>Sign in</li>
+                            <li>Sign up</li>
+                            <li>Sign out</li>
+                            <li>Forget password</li>
+                            <li>Reset password</li>
+                            <li>Lock screen</li>
+                            <li>2FA</li>
+                        </div>
+                        <li id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-3"> <i class="bi bi-caret-right-fill"></i> Split</li>
+                        <div class= "accordion-collapse collapse ms-5" id="authentication-3" style="list-style: none;">
+                            <li>Sign in</li>
+                            <li>Sign up</li>
+                            <li>Sign out</li>
+                            <li>Forget password</li>
+                            <li>Reset password</li>
+                            <li>Lock screen</li>
+                            <li>2FA</li>
+                        </div>
+                        <li id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-4"> 
+                            <i class="bi bi-caret-right-fill"></i>     Card</li>
+                        <div class= "accordion-collapse collapse ms-5" id="authentication-4" style="list-style: none;">
+                            <li>Sign in</li>
+                            <li>Sign up</li>
+                            <li>Sign out</li>
+                            <li>Forget password</li>
+                            <li>Reset password</li>
+                            <li>Lock screen</li>
+                            <li>2FA</li>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <p id="layout" data-bs-toggle="collapse" data-bs-target="#layout-1">
+                        <i class="bi bi-caret-right-fill"></i> <i
+                        class="bi bi-columns ps-2"></i> Layout</p>
+                    <div class= "accordion-collapse collapse ms-5" id="layout-1" style="list-style: none;">
+                        <li>Vertical sidenav</li>
+                        <li>Dark mode</li>
+                        <li>Sidenav collapse</li>
+                        <li>Dark nav</li>
+                        <li>Topnav slim</li>
+                        <li>Navbar top slim</li>
+                        <li>Navbar top</li>
+                        <li>Horizontal slim</li>
+                        <li>Combo nav</li>
+                        <li>Combo nav slim</li>
+                        <li>Dual slim</li>
+                    </div>
+                </div>
+
+
+                <h6>MODULES</h6>
+                <div class="item">
+                    <p id=" form" data-bs-toggle="collapse" data-bs-target="#form-1">
+                        <i class="bi bi-caret-right-fill"></i> <i
+                        class="bi bi-file-earmark-medical ps-2"></i>  Form</p>
+                    <div class= "accordion-collapse collapse ms-5" id="form-1" style="list-style: none;">
+            
+                        <li id="form" data-bs-toggle="collapse" data-bs-target="#form-2"> 
+                            <i class="bi bi-caret-right-fill"></i>     Basic</li>
+                        <div class= "accordion-collapse collapse ms-5" id="form-2" style="list-style: none;">
+                            <li>Form control</li>
+                            <li>Input group</li>
+                            <li>Select</li>
+                            <li>Checks</li>
+                            <li>Range</li>
+                            <li>Floating labels</li>
+                            <li>Layout</li>
+                        </div>
+            
+                        <li id="form" data-bs-toggle="collapse" data-bs-target="#form-3">
+                            <i class="bi bi-caret-right-fill"></i>     Advance</li>
+                        <div class= "accordion-collapse collapse ms-5" id="form-3" style="list-style: none;">
+                            <li>Advance select</li>
+                            <li>Date picker</li>
+                            <li>Editor</li>
+                            <li>Emoji button</li>
+                            <li>File uploader</li>
+                            <li>Rating</li>
+                        </div>
+            
+                        <li>Validation</li>
+                        <li>Wizard <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                    </div>
+                </div>
+
+                    <div class="item">
+                        <p id="icon" data-bs-toggle="collapse" data-bs-target="#icon-1">
+                            <i class="bi bi-caret-right-fill"></i> <i
+                            class="bi bi-bricks ps-2"></i>    icon</p>
+                        <div class= "accordion-collapse collapse ms-5" id="icon-1" style="list-style: none;">
+                            <li>Feather</li>
+                            <li>Font awesome</li>
+                            <li>Unicons</li>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <p id="tables" data-bs-toggle="collapse" data-bs-target="#tables-1">
+                            <i class="bi bi-caret-right-fill"></i>  <i
+                            class="bi bi-table ps-2"></i>  Tables</p>
+                        <div class= "accordion-collapse collapse ms-5" id="tables-1" style="list-style: none;">
+                            <li>Basic tables</li>
+                            <li>Advance tables</li>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <p id="chart" data-bs-toggle="collapse" data-bs-target="#chart-1">
+                            <i class="bi bi-caret-right-fill"></i>    <i
+                            class="bi bi-bar-chart-fill ps-2"></i>   Chart</p>
+                        <div class= "accordion-collapse collapse ms-5" id="chart-1" style="list-style: none;">
+                            <li>Echarts </li>
+                            <li>Gantt chart </li>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item">
+                        <p id="components" data-bs-toggle="collapse" data-bs-target="#components-1">
+                            <i class="bi bi-caret-right-fill"></i> <i
+                            class="bi bi-box-seam ps-2"></i>    Components</p>
+                        <div class= "accordion-collapse collapse ms-5" id="components-1" style="list-style: none;">
+                            <li>accordion </li>
+                            <li>Avatar</li>
+                            <li>Alerts</li>
+                            <li>Badge</li>
+                            <li>breadcrumb</li>
+                            <li>Button</li>
+                            <li>Celendar <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                            <li>Card</li>
+                            <li data-bs-toggle="collapse" data-bs-target="#components-2">
+                                <i class="bi bi-caret-right-fill"></i>     Basic</li>
+                            <div class= "accordion-collapse collapse ms-5" id="components-2" style="list-style: none;">
+                                <li>Form control</li>
+                                <li>Input group</li>
+                            </div>    
+                            <li>collapse</li>
+                            <li>dropdown</li>
+                            <li>List group</li>
+                            <li>Countup</li>
+                            <li>Draggable</li>
+                            <li>Modals</li>
+                            <li data-bs-toggle="collapse" data-bs-target="#components-3">
+                                <i class="bi bi-caret-right-fill"></i>     Nav & Tabs</li>
+                            <div class= "accordion-collapse collapse ms-5" id="components-3" style="list-style: none;">
+                                <li>Navs</li>
+                                <li>Navbar</li>
+                                <li>Tabs</li>
+                            </div>  
+                            <li data-bs-toggle="collapse" data-bs-target="#components-4">
+                                <i class="bi bi-caret-right-fill"></i>      Pictures</li>
+                            <div class= "accordion-collapse collapse ms-5" id="components-4" style="list-style: none;">
+                                <li>Lightbox</li>
+                            </div>  
+                            <li>Offcanvas</li>
+                            <li>Progress bar</li>
+                            <li>Placeholder</li>
+                            <li>Pagination</li>
+                            <li>Popover</li>
+                            <li>Spinner</li>
+                            <li>Toast</li>
+                            <li>Tooltip</li>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item">
+                        <p id="utilities" data-bs-toggle="collapse" data-bs-target="#utilities-1">
+                            <i class="bi bi-caret-right-fill"></i> <i
+                            class="bi bi-wrench-adjustable ps-2"></i>    Utilities</p>
+                        <div class= "accordion-collapse collapse ms-5" id="utilities-1" style="list-style: none;">
+                            <li>Background</li>
+                            <li>Borders</li>
+                            <li>Colors</li>
+                            <li>Display</li>
+                            <li>Grid</li>
+                            <li>Flex</li>
+                            <li>Stack</li>
+                            <li>Float</li>
+                            <li>Interaction</li>
+                            <li>Opacity</li>
+                            <li>Overflow</li>
+                            <li>Position</li>
+                            <li>Shadow</li>
+                            <li>Sizing</li>
+                            <li>Spacing</li>
+                            <li>Typography</li>
+                            <li>Vartical align</li>
+                            <li>Visiblity</li>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item">
+                        <p style="padding-left: 13px;"> <i class="bi bi-border-width ps-3"></i> Widgets <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                    </div>
+    
+                    <div class="item">
+                        <p id="multi" data-bs-toggle="collapse" data-bs-target="#multi-1">
+                            <i class="bi bi-caret-right-fill"></i>  <i
+                            class="bi bi-layers ps-2"></i>   Multi level</p>
+                        <div class= "accordion-collapse collapse ms-5" id="multi-1" style="list-style: none;">
+                            <li data-bs-toggle="collapse" data-bs-target="#multi-2">
+                                <i class="bi bi-caret-right-fill"></i>     Level two</li>
+                            <div class= "accordion-collapse collapse ms-5" id="multi-2" style="list-style: none;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            </div>
+                            <li data-bs-toggle="collapse" data-bs-target="#multi-3">
+                                <i class="bi bi-caret-right-fill"></i>     Level three</li>
+                            <div class= "accordion-collapse collapse ms-5" id="multi-3" style="list-style: none;">
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                            </div>
+                            <li data-bs-toggle="collapse" data-bs-target="#multi-4">
+                                <i class="bi bi-caret-right-fill"></i>     Level four</li>
+                            <div class= "accordion-collapse collapse ms-5" id="multi-4" style="list-style: none;">
+                            <li>Item 5</li>
+                            <li>Item 6</li>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h6>DOCUMENTATION</h6>
+
+             <div class="item">
+                <p style="padding-left: 13px;"> <i class="bi bi-xbox ps-3"></i> Getting started</p>
+             </div>
+
+
+             <div class="item">
+                <p id="customization" data-bs-toggle="collapse" data-bs-target="#customization-1">
+                    <i class="bi bi-caret-right-fill"></i>   <i
+                    class="bi bi-gear-fill ps-2"></i>   Customization</p>
+                <div class= "accordion-collapse collapse ms-5" id="customization-1" style="list-style: none;">
+                    <li>Configuration </li>
+                    <li>Styling</li>
+                    <li>Dark mode</li>
+                </div>
+            </div>
+
+            <div class="item">
+                <p style="padding-left: 13px;"> <i class="bi bi-diagram-3 ps-3"></i> Design file</p>
+             </div>
+
+             <div class="item">
+                <p style="padding-left: 13px;">  <i class="bi bi-cursor-fill ps-3"></i> Changelog</p>
+             </div>
+            
+             <div class="item">
+                <p style="padding-left: 13px;">  <i class="bi bi-chevron-double-right ps-3"></i> Migrations</p>
+             </div>
+
+             <div class="item">
+                <p style="padding-left: 13px;"> <i class="bi bi-tv ps-3"></i> Showcase</p>
+             </div>
+
+             <div class="new" style="border-top: 1px solid lightgrey;   ">
+                <p>Collapsed View</p>
+            </div>
+        
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 right-menu">
+              <div class="row header">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6">
+                    <div class="col-10">
+                      <h3>Ecommerce Deshboard</h3>
+                      <h6>Here’s what’s going on at your business right now</h6>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 d-md-flex d-sm-block main-small-icon">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex small-icon">
+                            <img src="images/1.png" alt="">
+                            <div class="con ms-2">
+                              <h5>57 new orders</h5>
+                              <h6>Awating processing</h6>
+                            </div>
+                        </div> 
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex small-icon">
+                            <img src="images/2.png" alt="">
+                            <div class="con ms-2">
+                              <h5>5 orders</h5>
+                              <h6>on hold</h6>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex small-icon">
+                            <img src="images/3.png" alt="">
+                            <div class="con ms-2">
+                              <h5>15 product</h5>
+                              <h6>out of stock</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row total-sell">
+                        <div class="col-12 d-flex justify-content-between">
+                          <div class="col-9">
+                            <h3>Total sell</h3>
+                            <h6>Payment received across all channels</h6>
+                          </div>
+                          <div class="col-3">
+                            <select >
+                              <option value="mar">Mar 1 - 31,2023</option>
+                              <option value="apr">Apr 1 - 30,2023</option>
+                              <option value="may">May 1 - 31,2023</option>
+                            </select>
+                          </div>
+                        </div>
+                    </div>
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                      
+                </div>
+                
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6 header-side-chart">
+                  <div class="row">
+                      <div class="col-12 col-sm-12 col-md-6 col-xl-6 top">
+                      <div class=" d-flex justify-content-between">
+                          <div>
+                              <h5>Total orders</h5>
+                              <h6>Last 7 days</h6>
+                          </div>
+                          <h6><span>-6.8%</span></h6>
+                          <h4>16,247</h4>
+                      </div>
+                        <div>
+                        <canvas id="myChart-1"></canvas>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-6 col-xl-6 top">
+                      <div class=" d-flex justify-content-between">
+                          <div>
+                              <h5>New customers</h5>
+                              <h6>Last 7 days</h6>
+                          </div>
+                          <h6><span>+26.5%</span></h6>
+                          <h4>356</h4>
+                      </div>
+                        <div>
+                        <canvas id="myChart-2"></canvas>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-6 col-xl-6 top">
+                      <div class=" d-flex justify-content-between">
+                          <div>
+                              <h5>Top coupons</h5>
+                              <h6>Last 7 days</h6>
+                          </div>
+                      </div>
+                        <div>
+                        <canvas id="myChart-3"></canvas>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-6 col-xl-6 top">
+                      <div class=" d-flex justify-content-between">
+                          <div>
+                              <h5>Paying vs non paying</h5>
+                              <h6>Last 7 days</h6>
+                          </div>
+                      </div>
+                        <div>
+                        <canvas id="myChart-4"></canvas>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>  
+
+              <div class="row main-table">
+                <div class="row Latest-reviews">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <h3>Latest reviews</h3>
+                        <h6>Payment received across all channels</h6>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 search m-auto" style="text-align: center;">
+                            <input type="text" placeholder="search" class="col-8">
+                            <button>All products</button>
+                            <button>...</button>
+                    </div>
+                </div>
+
+                <div class="scrollbar ps-1 overflow-auto">
+                    <table class="table border-top ">
+                        <thead>
+                            <tr>
+                                <th style="width: 30px;">
+                                    <div class="form-check fs-5 mb-0">
+                                        <input type="checkbox" class="form-check-input ">
+                                    </div>
+                                </th>
+                                <th class=""></th>
+                                <th class="py-2" style="min-width: 360px;">
+                                    Products
+                                </th>
+                                <th style="min-width: 200px;"> Customer </th>
+                                <th style="min-width: 150px;">Ratings</th>
+                                <th style="min-width: 350px;">Reviews</th>
+                                <th class="ps-5">Status</th>
+                                <th class="text-end" style="min-width: 150px;text-align: center;">Time</th>
+                                <th class=""></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="position-static">
+                                <td>
+                                    <div class="form-check fs-8 mb-0"><input type="checkbox"
+                                            class="form-check-input"></div>
+                                </td>
+                                <td class="py-2">
+                                    <a href="" class="d-block rounded-2 border ">
+                                        <img src="images/p-1.png" alt="" width="53px">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="" class="fw-semibold nav-link ">Fitbit Sense Advanced Smartwatch with Tools fo...</a>
+                                </td>
+                                <td>
+                                    <a class="d-flex align-items-center text-900 nav-link link-dark "
+                                        href="">
+                                        <div class="avatar avatar-l"><img src="images/user-2.webp" alt="avatar"
+                                                class="rounded-circle"></div>
+                                        <h6 class="mb-0 ms-3 text-900">Richard dawkins</h6>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span></span>
+                                </td>
+                                <td>
+                                    <p class="fs--1 fw-semi-bold text-1000 mb-0 line-clamp-3">This Fitbit is fantastic! I was trying to be in better shape and needed some motivation, so I decided to treat myself to a new Fitbit.</p>
+                                </td>
+                                <td class="ps-5">
+                                    <span class="badge badge1">
+                                        <span style="color:rgb(151, 231, 151);">APPROVED</span>
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="hover-side">
+                                        <h6 class="text-1000 mb-0">Just now</h6>
+                                    </div>
+
+                                </td>
+                                <td class="text-end ">
+                                
+                            </tr>
+                            <tr class="position-static">
+                                <td>
+                                    <div class="form-check fs-8 mb-0"><input type="checkbox"
+                                            class="form-check-input"></div>
+                                </td>
+                                <td class="py-2">
+                                    <a href="" class="d-block rounded-2 border ">
+                                        <img src="images/p-2.png" alt="" width="53px">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="" class="fw-semibold nav-link ">iPhone 13 pro max-Pacific Blue-128GB storage</a>
+                                </td>
+                                <td>
+                                    <a class="d-flex align-items-center text-900 nav-link link-dark "
+                                        href="">
+                                        <div class="avatar avatar-l"><img src="images/user-5.webp" alt="avatar"
+                                                class="rounded-circle"></div>
+                                        <h6 class="mb-0 ms-3 text-900">Ashley garrett</h6>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span></span>
+                                </td>
+                                <td>
+                                    <p class="fs--1 fw-semi-bold text-1000 mb-0 line-clamp-3">The order was delivered ahead of schedule. To give us additional time, you should leave the packaging sealed with plastic.</p>
+                                </td>
+                                <td class="ps-5">
+                                    <span class="badge badge1">
+                                        <span style="color:rgb(151, 231, 151);">APPROVED</span>
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="hover-side">
+                                        <h6 class="text-1000 mb-0">Just now</h6>
+                                    </div>
+
+                                </td>
+                                <td class="text-end ">
+                                
+                            </tr>
+                            <tr class="position-static">
+                                <td>
+                                    <div class="form-check fs-8 mb-0"><input type="checkbox"
+                                            class="form-check-input"></div>
+                                </td>
+                                <td class="py-2">
+                                    <a href="" class="d-block rounded-2 border ">
+                                        <img src="images/p-3.png" alt="" width="53px">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="" class="fw-semibold nav-link ">Apple MacBook Pro 13 inch-M1-8/256GB-space</a>
+                                </td>
+                                <td>
+                                    <a class="d-flex align-items-center text-900 nav-link link-dark "
+                                        href="">
+                                        <div class="avatar avatar-l"><img src="images/user-6.webp" alt="avatar"
+                                                class="rounded-circle"></div>
+                                        <h6 class="mb-0 ms-3 text-900">Woodrow burton</h6>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span></span>
+                                </td>
+                                <td>
+                                    <p class="fs--1 fw-semi-bold text-1000 mb-0 line-clamp-3">It's a Mac, after all. Once you've gone Mac, there's no going back. My first Mac lasted over nine years, and this is my second.</p>
+                                </td>
+                                <td class="ps-5">
+                                    <span class="badge badge1">
+                                        <span style="color:#bc3803;">PENDING</span>
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="hover-side">
+                                        <h6 class="text-1000 mb-0">Just now</h6>
+                                    </div>
+
+                                </td>
+                                <td class="text-end ">
+                                
+                            </tr>
+                            <tr class="position-static">
+                                <td>
+                                    <div class="form-check fs-8 mb-0"><input type="checkbox"
+                                            class="form-check-input"></div>
+                                </td>
+                                <td class="py-2">
+                                    <a href="" class="d-block rounded-2 border ">
+                                        <img src="images/p-4.png" alt="" width="53px">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="" class="fw-semibold nav-link ">Apple iMac 24" 4K Retina Display M1 8 Core CPU...</a>
+                                </td>
+                                <td>
+                                    <a class="d-flex align-items-center text-900 nav-link link-dark "
+                                        href="">
+                                        <div class="avatar avatar-l"><img src="images/user-2.webp" alt="avatar"
+                                                class="rounded-circle"></div>
+                                        <h6 class="mb-0 ms-3 text-900">Eric mcgee</h6>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span></span>
+                                </td>
+                                <td>
+                                    <p class="fs--1 fw-semi-bold text-1000 mb-0 line-clamp-3">Personally, I like the minimalist style, but I wouldn't choose it if I were searching for a computer that I would use frequently. It's...See more</p>
+                                </td>
+                                <td class="ps-5">
+                                    <span class="badge badge1">
+                                        <span style="color:#bc3803;">PENDING</span>
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="hover-side">
+                                        <h6 class="text-1000 mb-0">Just now</h6>
+                                    </div>
+
+                                </td>
+                                <td class="text-end ">
+                                
+                            </tr>
+                            <tr class="position-static">
+                                <td>
+                                    <div class="form-check fs-8 mb-0"><input type="checkbox"
+                                            class="form-check-input"></div>
+                                </td>
+                                <td class="py-2">
+                                    <a href="" class="d-block rounded-2 border ">
+                                        <img src="images/p-5.png" alt="" width="53px">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="" class="fw-semibold nav-link ">Razer Kraken v3 x Wired 7.1 Surroung Sound Gam...</a>
+                                </td>
+                                <td>
+                                    <a class="d-flex align-items-center text-900 nav-link link-dark "
+                                        href="">
+                                        <div class="avatar avatar-l"><img src="images/user-2.webp" alt="avatar"
+                                                class="rounded-circle"></div>
+                                        <h6 class="mb-0 ms-3 text-900">Kim carroll</h6>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span></span>
+                                </td>
+                                <td>
+                                    <p class="fs--1 fw-semi-bold text-1000 mb-0 line-clamp-3">It performs exactly as expected. There are three of these in the family.</p>
+                                </td>
+                                <td class="ps-5">
+                                    <span class="badge badge1">
+                                        <span style="color:#bc3803;">PENDING</span>
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="hover-side">
+                                        <h6 class="text-1000 mb-0">Just now</h6>
+                                    </div>
+
+                                </td>
+                                <td class="text-end ">
+                                
+                            </tr>
+                            <tr class="position-static">
+                                <td>
+                                    <div class="form-check fs-8 mb-0"><input type="checkbox"
+                                            class="form-check-input"></div>
+                                </td>
+                                <td class="py-2">
+                                    <a href="" class="d-block rounded-2 border ">
+                                        <img src="images/p-6.png" alt="" width="53px">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="" class="fw-semibold nav-link ">PlayStation 5 DualSense Wireless Controller</a>
+                                </td>
+                                <td>
+                                    <a class="d-flex align-items-center text-900 nav-link link-dark "
+                                        href="">
+                                        <div class="avatar avatar-l"><img src="images/user.webp" alt="avatar"
+                                                class="rounded-circle"></div>
+                                        <h6 class="mb-0 ms-3 text-900">Barbara lucas</h6>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span>
+                                        <span class="bi bi-star-fill" style="color: gold;"></span></span>
+                                </td>
+                                <td>
+                                    <p class="fs--1 fw-semi-bold text-1000 mb-0 line-clamp-3">The controller is quite comfy for me. Despite its increased size, the controller still fits well in my hands.</p>
+                                </td>
+                                <td class="ps-5">
+                                    <span class="badge badge1">
+                                        <span style="color:rgb(151, 231, 151);">APPROVED</span>
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="hover-side">
+                                        <h6 class="text-1000 mb-0">Just now</h6>
+                                    </div>
+
+                                </td>
+                                <td class="text-end ">
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+
+              <div class="row second-table">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <h3>Top regions by revenue</h3>
+                    <h6>Where you generated most of the revenue</h6>
+
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>COUNTRY</td>
+                            <td>USER</td>
+                            <td>TRANSACTIONS</td>
+                            <td>REVENUE</td>
+                            <td>CONV.RATE</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>377,620</td>
+                            <td>236</td>
+                            <td>$15,758</td>
+                            <td>10.32%</td>
+                        </tr>
+                        <tr>
+                            <td>1. <img src="images/c-1.png" alt=""> INDIA</td>
+                            <td>92896 (41.6%)</td>
+                            <td>67 (34.3%)</td>
+                            <td>7560 (36.9%)</td>
+                            <td>14.01%</td>
+                        </tr>
+                        <tr>
+                            <td>2. <img src="images/c-2.png" alt=""> CHINA</td>
+                            <td>50496 (32.8%)</td>
+                            <td>54 (23.8%)</td>
+                            <td>6532 (26.5%)</td>
+                            <td>23.56%</td>
+                        </tr>
+                        <tr>
+                            <td>3. <img src="images/c-3.png" alt=""> USA</td>
+                            <td>45679 (24.3%)</td>
+                            <td>35 (19.7%)</td>
+                            <td>5432 (16.9%)</td>
+                            <td>10.23%</td>
+                        </tr>
+                        <tr>
+                            <td>4. <img src="images/c-4.png" alt=""> SOUTH KOREA</td>
+                            <td>36453 (19.7%)</td>
+                            <td>22 (9.54%)</td>
+                            <td>4673 (11.6%)</td>
+                            <td>8.85%</td>
+                        </tr>
+                        <tr>
+                            <td>5. <img src="images/c-5.png" alt=""> VIETNAM</td>
+                            <td>15007 (11.9%)</td>
+                            <td>17 (6.91%)</td>
+                            <td>2456 (10.2%)</td>
+                            <td>6.01%</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2505987758523!2d72.87664158601467!3d21.14242313369221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051c06d87ab17%3A0x809cd984bd5b6d6d!2sRed%20%26%20White%20Multimedia%20Education!5e0!3m2!1sen!2sin!4v1708314119784!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+
+              <div class="row last-chart">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <h3>Projection vs actual</h3>
+                    <h6>Actual earnings vs projected earnings</h6>
+
+                    <div>
+                        <canvas id="myChart-5"></canvas>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <h3>Returning customer rate</h3>
+                    <h6>Rate of customers returning to your shop over time</h6>
+
+                    <div>
+                        <canvas id="myChart-6"></canvas>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="row footer">
+                <h6>CREATING WITH RnW | 2024 <a href="#">JENISH</a></h6>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h6>
+          <button type="button" class="btn-close d-block d-md-none d-lg-none d-xl-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+            <!-- <div class="navbar-menu"> -->
+                <div class="item">
+                    <p id="home" data-bs-toggle="collapse" data-bs-target="#home-1">
+                    <i class="bi bi-caret-right-fill"></i> Home</p>
+                    <div class= "accordion-collapse collapse ms-5" id="home-1" style="list-style: none;">
+                        <li>E commerce</li>
+                        <li>Project management</li>
+                        <li>CRM</li>
+                        <li>Social feed</li>
+                    </div>
+                </div>
+
+                <h6>APPS</h6>
+
+                <div class="item">
+                    <p id="ecommerce" data-bs-toggle="collapse" data-bs-target="#ecom">
+                        <i class="bi bi-caret-right-fill"></i>     E commerce</p>
+                    <div class= "accordion-collapse collapse ms-5" id="ecom" style="list-style: none;">
+                        <li>Admin</li>
+                        <li>Customer</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="crm" data-bs-toggle="collapse" data-bs-target="#crm-1">
+                        <i class="bi bi-caret-right-fill"></i>  CRM</p>
+                    <div class= "accordion-collapse collapse ms-5" id="crm-1" style="list-style: none;">
+                        <li>Analytics</li>
+                        <li>Deals <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                        <li>Deal details</li>
+                        <li>Leads</li>
+                        <li>Lead details</li>
+                        <li>Reports</li>
+                        <li>Report details</li>
+                        <li>Add contact</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="project" data-bs-toggle="collapse" data-bs-target="#proj-1">
+                    <i class="bi bi-caret-right-fill"></i>     Project management</p>
+                    <div class= "accordion-collapse collapse ms-5" id="proj-1" style="list-style: none;">
+                        <li>Create new</li>
+                        <li>Project list view</li>
+                        <li>Project card view</li>
+                        <li>Project board view</li>
+                        <li>Todo list</li>
+                        <li>Project details</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 20px;">
+                        <i class="bi bi-chat-left"></i>Chat</p>
+                </div>
+
+                <div class="item">
+                    <p id="email" data-bs-toggle="collapse" data-bs-target="#mail-1">
+                    <i class="bi bi-caret-right-fill"></i>     Email</p>
+                    <div class= "accordion-collapse collapse ms-5" id="mail-1" style="list-style: none;">
+                        <li>Inbox</li>
+                        <li>Email ditail</li>
+                        <li>Compose</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="event" data-bs-toggle="collapse" data-bs-target="#event-1">
+                        <i class="bi bi-caret-right-fill"></i>     Event</p>
+                    <div class= "accordion-collapse collapse ms-5" id="event-1" style="list-style: none;">
+                        <li>Create an event</li>
+                        <li>Event ditail</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="kanban" data-bs-toggle="collapse" data-bs-target="#kanban-1">
+                        <i class="bi bi-caret-right-fill"></i>     Kanban <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                    <div class= "accordion-collapse collapse ms-5" id="kanban-1" style="list-style: none;">
+                        <li>Kanban</li>
+                        <li>Board</li>
+                        <li>Create bord</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="social" data-bs-toggle="collapse" data-bs-target="#social-1">
+                        <i class="bi bi-caret-right-fill"></i>     Social</p>
+                    <div class= "accordion-collapse collapse ms-5" id="social-1" style="list-style: none;">
+                        <li>kanban</li>
+                        <li>Board</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 20px;">Celender</p>
+                </div>
+
+                <h6>PAGES</h6>
+
+                <div class="item">
+                    <p style="padding-left: 20px;">Starter</p>
+                </div>
+
+                <div class="item">
+                    <p id="faq" data-bs-toggle="collapse" data-bs-target="#faq-1">
+                        <i class="bi bi-caret-right-fill"></i>     Faq</p>
+                    <div class= "accordion-collapse collapse ms-5" id="faq-1" style="list-style: none;">
+                        <li>Faq accordion</li>
+                        <li>Faq tab <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="landing" data-bs-toggle="collapse" data-bs-target="#landing-1">
+                        <i class="bi bi-caret-right-fill"></i>     Landing</p>
+                    <div class= "accordion-collapse collapse ms-5" id="landing-1" style="list-style: none;">
+                        <li>Default</li>
+                        <li>Alternate <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="pricing" data-bs-toggle="collapse" data-bs-target="#pricing-1">
+                        <i class="bi bi-caret-right-fill"></i>     Pricing</p>
+                    <div class= "accordion-collapse collapse ms-5" id="pricing-1" style="list-style: none;">
+                        <li>Pricing colums</li>
+                        <li>Pricing grid</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 20px;">Notification</p>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 20px;">Members</p>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 20px;">Timeline  <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 20px;"> Coming soon <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                </div>
+
+                <div class="item">
+                    <p id="error" data-bs-toggle="collapse" data-bs-target="#error-1">
+                        <i class="bi bi-caret-right-fill"></i>     Error</p>
+                    <div class= "accordion-collapse collapse ms-5" id="error-1" style="list-style: none;">
+                        <li>403</li>
+                        <li>404</li>
+                        <li>500</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-1">
+                        <i class="bi bi-caret-right-fill"></i>     Authentication</p>
+                    <div class= "accordion-collapse collapse ms-5" id="authentication-1" style="list-style: none;">
+                        <li id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-2">      <i class="bi bi-caret-right-fill"></i> Simple</li>
+                        <div class= "accordion-collapse collapse ms-5" id="authentication-2" style="list-style: none;">
+                            <li>Sign in</li>
+                            <li>Sign up</li>
+                            <li>Sign out</li>
+                            <li>Forget password</li>
+                            <li>Reset password</li>
+                            <li>Lock screen</li>
+                            <li>2FA</li>
+                        </div>
+                        <li id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-3"> <i class="bi bi-caret-right-fill"></i> Split</li>
+                        <div class= "accordion-collapse collapse ms-5" id="authentication-3" style="list-style: none;">
+                            <li>Sign in</li>
+                            <li>Sign up</li>
+                            <li>Sign out</li>
+                            <li>Forget password</li>
+                            <li>Reset password</li>
+                            <li>Lock screen</li>
+                            <li>2FA</li>
+                        </div>
+                        <li id="authentication" data-bs-toggle="collapse" data-bs-target="#authentication-4"> 
+                            <i class="bi bi-caret-right-fill"></i>     Card</li>
+                        <div class= "accordion-collapse collapse ms-5" id="authentication-4" style="list-style: none;">
+                            <li>Sign in</li>
+                            <li>Sign up</li>
+                            <li>Sign out</li>
+                            <li>Forget password</li>
+                            <li>Reset password</li>
+                            <li>Lock screen</li>
+                            <li>2FA</li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="layout" data-bs-toggle="collapse" data-bs-target="#layout-1">
+                        <i class="bi bi-caret-right-fill"></i> Layout</p>
+                    <div class= "accordion-collapse collapse ms-5" id="layout-1" style="list-style: none;">
+                        <li>Vertical sidenav</li>
+                        <li>Dark mode</li>
+                        <li>Sidenav collapse</li>
+                        <li>Dark nav</li>
+                        <li>Topnav slim</li>
+                        <li>Navbar top slim</li>
+                        <li>Navbar top</li>
+                        <li>Horizontal slim</li>
+                        <li>Combo nav</li>
+                        <li>Combo nav slim</li>
+                        <li>Dual slim</li>
+                    </div>
+                </div>
+
+                <h6>MODULES</h6>
+
+                <div class="item">
+                    <p id=" form" data-bs-toggle="collapse" data-bs-target="# form-1"><i class="bi bi-caret-right-fill"></i>  Form</p>
+                    <div class= "accordion-collapse collapse ms-5" id=" form-1" style="list-style: none;">
+
+                        <li id="form" data-bs-toggle="collapse" data-bs-target="#form-2"> 
+                            <i class="bi bi-caret-right-fill"></i>     Basic</li>
+                        <div class= "accordion-collapse collapse ms-5" id="form-2" style="list-style: none;">
+                            <li>Form control</li>
+                            <li>Input group</li>
+                            <li>Select</li>
+                            <li>Checks</li>
+                            <li>Range</li>
+                            <li>Floating labels</li>
+                            <li>Layout</li>
+                        </div>
+
+                        <li id="form" data-bs-toggle="collapse" data-bs-target="#form-3">
+                            <i class="bi bi-caret-right-fill"></i>      Advance</li>
+                        <div class= "accordion-collapse collapse ms-5" id="form-3" style="list-style: none;">
+                            <li>Advance select</li>
+                            <li>Date picker</li>
+                            <li>Editor</li>
+                            <li>Emoji button</li>
+                            <li>File uploader</li>
+                            <li>Rating</li>
+                        </div>
+
+                        <li>Validation</li>
+                        <li>Wizard <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p></li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="icon" data-bs-toggle="collapse" data-bs-target="#icon-1">
+                        <i class="bi bi-caret-right-fill"></i>     icon</p>
+                    <div class= "accordion-collapse collapse ms-5" id="icon-1" style="list-style: none;">
+                        <li>Feather</li>
+                        <li>Font awesome</li>
+                        <li>Unicons</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="tables" data-bs-toggle="collapse" data-bs-target="#tables-1">
+                        <i class="bi bi-caret-right-fill"></i>     Tables</p>
+                    <div class= "accordion-collapse collapse ms-5" id="tables-1" style="list-style: none;">
+                        <li>Basic tables</li>
+                        <li>Advance tables</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="chart" data-bs-toggle="collapse" data-bs-target="#chart-1">
+                        <i class="bi bi-caret-right-fill"></i>     Chart</p>
+                    <div class= "accordion-collapse collapse ms-5" id="chart-1" style="list-style: none;">
+                        <li>Echarts </li>
+                        <li>Gantt chart </li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="components" data-bs-toggle="collapse" data-bs-target="#components-1">
+                        <i class="bi bi-caret-right-fill"></i>     Components</p>
+                    <div class= "accordion-collapse collapse ms-5" id="components-1" style="list-style: none;">
+                        <li>accordion </li>
+                        <li>Avatar</li>
+                        <li>Alerts</li>
+                        <li>Badge</li>
+                        <li>breadcrumb</li>
+                        <li>Button</li>
+                        <li>Celendar <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></li>
+                        <li>Card</li>
+                        <li data-bs-toggle="collapse" data-bs-target="#components-2">
+                            <i class="bi bi-caret-right-fill"></i>     Basic</li>
+                        <div class= "accordion-collapse collapse ms-5" id="components-2" style="list-style: none;">
+                            <li>Form control</li>
+                            <li>Input group</li>
+                        </div>    
+                        <li>collapse</li>
+                        <li>dropdown</li>
+                        <li>List group</li>
+                        <li>Countup</li>
+                        <li>Draggable</li>
+                        <li>Modals</li>
+                        <li data-bs-toggle="collapse" data-bs-target="#components-3">
+                            <i class="bi bi-caret-right-fill"></i>     Nav & Tabs</li>
+                        <div class= "accordion-collapse collapse ms-5" id="components-3" style="list-style: none;">
+                            <li>Navs</li>
+                            <li>Navbar</li>
+                            <li>Tabs</li>
+                        </div>  
+                        <li data-bs-toggle="collapse" data-bs-target="#components-4">
+                            <i class="bi bi-caret-right-fill"></i>      Pictures</li>
+                        <div class= "accordion-collapse collapse ms-5" id="components-4" style="list-style: none;">
+                            <li>Lightbox</li>
+                        </div>  
+                        <li>Offcanvas</li>
+                        <li>Progress bar</li>
+                        <li>Placeholder</li>
+                        <li>Pagination</li>
+                        <li>Popover</li>
+                        <li>Spinner</li>
+                        <li>Toast</li>
+                        <li>Tooltip</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p id="utilities" data-bs-toggle="collapse" data-bs-target="#utilities-1">
+                        <i class="bi bi-caret-right-fill"></i>     Utilities</p>
+                    <div class= "accordion-collapse collapse ms-5" id="utilities-1" style="list-style: none;">
+                        <li>Background</li>
+                        <li>Borders</li>
+                        <li>Colors</li>
+                        <li>Display</li>
+                        <li>Grid</li>
+                        <li>Flex</li>
+                        <li>Stack</li>
+                        <li>Float</li>
+                        <li>Interaction</li>
+                        <li>Opacity</li>
+                        <li>Overflow</li>
+                        <li>Position</li>
+                        <li>Shadow</li>
+                        <li>Sizing</li>
+                        <li>Spacing</li>
+                        <li>Typography</li>
+                        <li>Vartical align</li>
+                        <li>Visiblity</li>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p style="padding-left: 20px;">Widgets <span style=" padding:0px 5px; align-items: center; background-color: rgb(18, 184, 184); color: white; border-radius: 5px;">new</span></p>
+                </div>
+
+                <div class="item">
+                    <p id="multi" data-bs-toggle="collapse" data-bs-target="#multi-1">
+                        <i class="bi bi-caret-right-fill"></i>     Multi level</p>
+                    <div class= "accordion-collapse collapse ms-5" id="multi-1" style="list-style: none;">
+                        <li data-bs-toggle="collapse" data-bs-target="#multi-2">
+                            <i class="bi bi-caret-right-fill"></i>     Level two</li>
+                        <div class= "accordion-collapse collapse ms-5" id="multi-2" style="list-style: none;">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        </div>
+                        <li data-bs-toggle="collapse" data-bs-target="#multi-3">
+                            <i class="bi bi-caret-right-fill"></i>     Level three</li>
+                        <div class= "accordion-collapse collapse ms-5" id="multi-3" style="list-style: none;">
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                        </div>
+                        <li data-bs-toggle="collapse" data-bs-target="#multi-4">
+                            <i class="bi bi-caret-right-fill"></i>     Level four</li>
+                        <div class= "accordion-collapse collapse ms-5" id="multi-4" style="list-style: none;">
+                        <li>Item 5</li>
+                        <li>Item 6</li>
+                        </div>
+                    </div>
+                </div>
+
+                 <h6>DOCUMENTATION</h6>
+
+                 <div class="item">
+                    <p style="padding-left: 20px;">Getting started</p>
+                 </div>
+
+                 <div class="item">
+                    <p id="customization" data-bs-toggle="collapse" data-bs-target="#customization-1">
+                        <i class="bi bi-caret-right-fill"></i>     Customization</p>
+                    <div class= "accordion-collapse collapse ms-5" id="customization-1" style="list-style: none;">
+                        <li>Configuration </li>
+                        <li>Styling</li>
+                        <li>Dark mode</li>
+                    </div>
+                </div>
+
+                 <div class="item">
+                    <p style="padding-left: 20px;"> Design file</p>
+                 </div>
+
+                 <div class="item">
+                    <p style="padding-left: 20px;">Changelog</p>
+                 </div>
+                
+                 <div class="item">
+                    <p style="padding-left: 20px;">Migrations</p>
+                 </div>
+
+                 <div class="item">
+                    <p style="padding-left: 20px;">Showcase</p>
+                 </div>
+
+                 <div class="new" style="border-top: 1px solid lightgrey;   ">
+                    <p>Collapsed View</p>
+                </div>
+    </div>
+
+  <div class="bell-menu">
+      <div class="head col-12 d-flex justify-content-between p-3">
+          <h6>Notification</h6>
+          <h6><a href="#">Mark as read</a></h6>
+      </div>
+
+      <div class="col-12">
+          <div class="row w-100 m-auto">
+              <div class="col-2 image">
+                  <img src="images/user-1.webp" alt=""  >
+              </div>
+              <div class="col-8 m-auto cont">
+                      <h6>Jessie Samson</h6>
+                      <p>💬Mentioned you in a comment <span>10m</span></p>
+
+                      <div><i class="bi bi-clock-fill"></i>10:41 AM August 7,2021</div>
+              </div>
+              
+              <div class="dots col-2 mt-5">
+                  <span><i class="bi bi-three-dots"></i></span>
+              </div>  
+          </div>
+      </div>
+
+      <div class="col-12">
+          <div class="row w-100 m-auto">
+              <div class="col-2 image">
+                  <img src="images/user-2.webp" alt=""  >
+              </div>
+              <div class="col-8 m-auto cont">
+                      <h6>Jessie Samson</h6>
+                      <p>📅Created an event.<span>20m</span></p>
+
+                      <div><i class="bi bi-clock-fill"></i>10:41 AM August 7,2021</div>
+              </div>
+              
+              <div class="dots col-2 mt-5">
+                  <span><i class="bi bi-three-dots"></i></span>
+              </div>  
+          </div>
+      </div>    
+      <div class="col-12">
+          <div class="row w-100 m-auto">
+              <div class="col-2 image">
+                  <img src="images/user-2.webp" alt=""  >
+              </div>
+              <div class="col-8 m-auto cont">
+                      <h6>Jessie Samson</h6>
+                      <p>👍Liked your comment<span>1h</span></p>
+
+                      <div><i class="bi bi-clock-fill"></i>10:41 AM August 7,2021</div>
+              </div>
+              
+              <div class="dots col-2 mt-5">
+                  <span><i class="bi bi-three-dots"></i></span>
+              </div>  
+          </div>
+      </div>    
+      <div class="col-12">
+          <div class="row w-100 m-auto">
+              <div class="col-2 image">
+                  <img src="images/user-4.webp" alt=""  >
+              </div>
+              <div class="col-8 m-auto cont">
+                      <h6>Jessie Samson</h6>
+                      <p>💬Mentioned you in a comment <span>10m</span></p>
+
+                      <div><i class="bi bi-clock-fill"></i>10:41 AM August 7,2021</div>
+              </div>
+              
+              <div class="dots col-2 mt-5">
+                  <span><i class="bi bi-three-dots"></i></span>
+              </div>  
+          </div>
+      </div>    
+      <div class="col-12">
+          <div class="row w-100 m-auto">
+              <div class="col-2 image">
+                  <img src="images/user-5.webp" alt=""  >
+              </div>
+              <div class="col-8 m-auto cont">
+                      <h6>Jessie Samson</h6>
+                      <p>👤Tagged you in a</p>
+
+                      <div><i class="bi bi-clock-fill"></i>10:41 AM August 7,2021</div>
+              </div>
+              
+              <div class="dots col-2 mt-5">
+                  <span><i class="bi bi-three-dots"></i></span>
+              </div>  
+          </div>
+      </div>    
+      <div class="col-12">
+          <div class="row w-100 m-auto">
+              <div class="col-2 image">
+                  <img src="images/user-6.webp" alt=""  >
+              </div>
+              <div class="col-8 m-auto cont">
+                      <h6>Jessie Samson</h6>
+                      <p>👍Liked your comment.</p>
+
+                      <div><i class="bi bi-clock-fill"></i>10:41 AM August 7,2021</div>
+              </div>
+              
+              <div class="dots col-2 mt-5">
+                  <span><i class="bi bi-three-dots"></i></span>
+              </div>  
+          </div>
+      </div>    
+
+      <div class="bottom col-12 text-center">
+          <h6><a href="#">Notification History</a></h6>
+      </div>
+  </div>
+
+  <div class="social-app">
+      <div class="col-12">
+          <div class="row w-100 m-auto text-center apps">
+              <div class="col-4 app-1">
+                  <a href="#">
+                      <img src="images/behance.webp" alt="">
+                      <p>Behance</p>
+                  </a>
+              </div>
+              <div class="col-4 app-1">
+                  <a href="#">
+                      <img src="images/google-cloud.webp" alt="">
+                      <p>cloud</p>
+                  </a>
+              </div>
+              <div class="col-4 app-1">
+                  <a href="#">
+                      <img src="images/slack.webp" alt="">
+                      <p>slack</p>
+                  </a>
+              </div>
+          </div>
+          <div class="row w-100 m-auto text-center apps">
+              <div class="col-4 app-1">
+                  <a href="#">
+                      <img src="images/gitlab.webp" alt="">
+                      <p>gitlab</p>
+                  </a>
+              </div>
+              <div class="col-4 app-1">
+                  <a href="#">
+                      <img src="images/bitbucket.webp" alt="">
+                      <p>bitbucket</p>
+                  </a>
+              </div>
+              <div class="col-4 app-1">
+                  <a href="#">
+                      <img src="images/google-drive.webp" alt="">
+                      <p>drive</p>
+                  </a>
+              </div>
+          </div>                    
+          <div class="row w-100 m-auto text-center apps">
+              <div class="col-4 app-1">
+                      <a href="#">
+                          <img src="images/trello.webp" alt="">
+                          <p>trello</p>
+                      </a>
+              </div>
+              <div class="col-4 app-1">
+                      <a href="#">
+                          <img src="images/figma.webp" alt="">
+                          <p>figma</p>
+                      </a>
+              </div>
+              <div class="col-4 app-1">
+                      <a href="#">
+                          <img src="images/twitter.webp" alt="">
+                          <p>twitter</p>
+                      </a>
+              </div>
+          </div>
+          <div class="row w-100 m-auto text-center apps">
+              <div class="col-4 app-1">
+                          <a href="#">
+                              <img src="images/pinterest.webp" alt="">
+                              <p>pinterest</p>
+                          </a>
+              </div>
+              <div class="col-4 app-1">
+                          <a href="#">
+                              <img src="images/ln.webp" alt="">
+                              <p>ln</p>
+                          </a>
+              </div>
+              <div class="col-4 app-1">
+                          <a href="#">
+                              <img src="images/google-maps.webp" alt="">
+                              <p>maps</p>
+                          </a>
+              </div>
+          </div>
+          <div class="row w-100 m-auto text-center apps">
+              <div class="col-4 app-1">
+                              <a href="#">
+                                  <img src="images/google-photos.webp" alt="">
+                                  <p>photos</p>
+                              </a>
+              </div>
+              <div class="col-4 app-1">
+                              <a href="#">
+                                  <img src="images/spotify.webp" alt="">
+                                  <p>spotify</p>
+                              </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="profile">
+      <div class="col-12">
+          <div class="img">
+              <img src="images/user.webp" alt="">
+          </div>
+          <input type="text" placeholder="Update your status">
+
+          <div class="option">
+              <ul>
+                  <li><i class="bi bi-person"></i>Profile</li>
+                  <li><i class="bi bi-pie-chart"></i>Dashboard</li>
+                  <li><i class="bi bi-lock"></i>Ports & Activity</li>
+                  <li><i class="bi bi-gear"></i>Setting & Privacy</li>
+                  <li><i class="bi bi-question-circle"></i>Help Center</li>
+                  <li><i class="bi bi-globe"></i>Language</li>
+              </ul>
+          </div>
+          <div class="account">
+              <i class="bi bi-person-plus"></i>Add another account
+          </div>
+
+          <button><i class="bi bi-box-arrow-right"></i>Sign out</button>
+          <div class="last d-flex">
+              <p>Privacy Policy</p>
+              <p>Term</p>
+              <p>Cookie</p>
+          </div>
+      </div>
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
